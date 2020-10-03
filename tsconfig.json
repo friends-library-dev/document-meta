@@ -1,12 +1,15 @@
 {
-  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
     "declaration": true,
     "outDir": "./dist",
     "rootDir": "./src",
-    "composite": true
+    "target": "ES2019",
+    "module": "CommonJS",
+    "incremental": true,
+    "lib": ["ESNext"]
   },
-  "include": ["./src"],
-  "references": [{ "path": "../types" }, { "path": "../env" }]
+  "exclude": ["**/__tests__/*", "./dist"]
 }
