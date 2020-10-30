@@ -14,7 +14,6 @@ describe(`DocumentMeta()`, () => {
         numSections: 18,
         revision: ``,
         productionRevision: ``,
-        audio: undefined,
         paperback: {
           size: `xl`,
           volumes: [435, 502],
@@ -26,7 +25,6 @@ describe(`DocumentMeta()`, () => {
               xl: 922,
               'xl--condensed': 900,
             },
-            split: undefined,
           },
         },
       },
@@ -93,7 +91,6 @@ describe(`DocumentMeta()`, () => {
           },
         },
       };
-      // @ts-ignore
       meta.set(newId, newMeta);
       expect(meta.get(newId)).toMatchObject(newMeta);
     });
