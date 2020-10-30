@@ -1,6 +1,6 @@
 {
   "name": "@friends-library/document-meta",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "document meta class and repo",
   "main": "./dist/index.js",
   "author": "Jared Henderson <jared@netrivet.com>",
