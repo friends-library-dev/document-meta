@@ -19,9 +19,11 @@
     "prepublishOnly": "npm run compile"
   },
   "dependencies": {
-    "@friends-library/dev": "^4.1.5",
+    "@friends-library/dev": "^4.1.11",
     "@friends-library/env": "^1.2.0",
     "@friends-library/types": "^1.1.1",
-    "@octokit/rest": "^16.33.1"
+    "@octokit/rest": "^16.33.1",
+    "fp-ts": "^2.8.5",
+    "io-ts": "^2.2.12"
   }
 }
