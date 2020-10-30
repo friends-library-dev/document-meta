@@ -4,6 +4,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "declaration": true,
+    "strict": true,
     "outDir": "./dist",
     "rootDir": "./src",
     "target": "ES2019",
