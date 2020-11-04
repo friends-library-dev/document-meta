@@ -1,6 +1,5 @@
 import * as t from 'io-ts';
-import { pipe } from 'fp-ts/function';
-import { fold, isRight } from 'fp-ts/Either';
+import { isRight } from 'fp-ts/Either';
 import { PRINT_SIZE_VARIANTS, PRINT_SIZES } from '@friends-library/types';
 
 // sanity check for hacks below...
@@ -102,10 +101,6 @@ export function assertValidEditionMeta(edMeta: unknown): asserts edMeta is Editi
 
 export function cleanEditionMeta(edMeta: EditionMeta): EditionMeta {
   const result = EditionMeta.decode(edMeta);
-  pipe(
-    result,
-    fold((x) => x, console.log),
-  );
   return isRight(result) ? result.right : edMeta;
 }
 
