@@ -18,7 +18,7 @@ export default class DocumentMeta {
       return null;
     }
 
-    return this.clone(this._data[id]);
+    return this.clone(this._data[id] || null);
   }
 
   public get data(): Meta {
@@ -42,7 +42,7 @@ export default class DocumentMeta {
 
   public *[Symbol.iterator](): IterableIterator<[string, EditionMeta]> {
     for (const id of Object.keys(this._data)) {
-      yield [id, this.clone(this._data[id])];
+      yield [id, this.clone(this._data[id] as EditionMeta)];
     }
   }
 
