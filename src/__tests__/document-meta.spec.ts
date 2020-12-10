@@ -1,5 +1,6 @@
-import DocumentMeta from '../document-meta';
+import { describe, beforeEach, expect, it, test } from '@jest/globals';
 import { PrintSize } from '@friends-library/types';
+import DocumentMeta from '../document-meta';
 
 describe(`DocumentMeta()`, () => {
   const testId = `en/george-fox/journal/original`;
@@ -101,8 +102,8 @@ describe(`DocumentMeta()`, () => {
       const eds = meta.getAll();
       expect(Array.isArray(eds)).toBe(true);
       expect(eds).toHaveLength(1);
-      expect(eds[0][0]).toBe(testId);
-      expect(eds[0][1]).toMatchObject(meta.get(testId)!);
+      expect(eds[0]![0]).toBe(testId);
+      expect(eds[0]![1]).toMatchObject(meta.get(testId)!);
     });
   });
 });

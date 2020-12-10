@@ -1,6 +1,6 @@
 import { Octokit } from '@octokit/rest';
 import env from '@friends-library/env';
-import { EditionMeta } from '@friends-library/types';
+import { EditionMeta } from './types';
 import DocumentMeta from './document-meta';
 
 export async function fetch(): Promise<DocumentMeta> {
