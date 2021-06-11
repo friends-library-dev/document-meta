@@ -6,6 +6,7 @@
     "declaration": true,
     "strict": true,
     "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
     "outDir": "./dist",
     "rootDir": "./src",
     "target": "ES2019",
